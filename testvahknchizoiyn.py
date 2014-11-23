@@ -1,100 +1,6 @@
 import unittest
 import re
 
-import unittest
-import re
-
-class Tests(unittest.TestCase):
-    def test_T_is_tor(self):
-        p = Parser()
-        result = p.parse("T")
-        self.assertEqual("tor", result)
-        
-    def test_K_is_kah(self):
-        p = Parser()
-        result = p.parse("K")
-        self.assertEqual("kah", result)
-
-    def test_R_is_rar(self):
-        p = Parser()
-        result = p.parse("R")
-        self.assertEqual("rar", result)
-
-    def test_KP_is_koo(self):
-        p = Parser()
-        result = p.parse("KP")
-        self.assertEqual("koo", result)
-
-    def test_VB_is_var(self):
-        p = Parser()
-        result = p.parse("VB")
-        self.assertEqual("var", result)
-
-    def test_LL_is_laiylaiy(self):
-        p = Parser()
-        result = p.parse("LL")
-        self.assertEqual("laiylaiy", result)
-
-    def test_KK_is_kahkah(self):
-        p = Parser()
-        result = p.parse("KK")
-        self.assertEqual("kahkah", result)
-
-    def test_LM_is_loo(self):
-        p = Parser()
-        result = p.parse("LM")
-        self.assertEqual("loo", result)
-
-    def test_ML_is_maiy(self):
-        p = Parser()
-        result = p.parse("ML")
-        self.assertEqual("maiy", result)
-
-    def test_U_is_saruhr(self):
-        p = Parser()
-        result = p.parse("U")
-        self.assertEqual("saruhr", result)
-
-    def test_AR_is_jarrar(self):
-        p = Parser()
-        result = p.parse("AR")
-        self.assertEqual("jarrar", result)
-
-    def test_RA_is_jarrar(self):
-        p = Parser()
-        result = p.parse("RA")
-        self.assertEqual("rarehr", result)
-
-    def test_DFA_is_deeehr(self):
-        p = Parser()
-        result = p.parse("DFA")
-        self.assertEqual("deeehr", result)
-
-    def test_UR_is_sartor(self):
-        p = Parser()
-        result = p.parse("UT")
-        self.assertEqual("sartor", result)
-
-    def test_Rn_is_rarn(self):
-        p = Parser()
-        result = p.parse("Rn")
-        self.assertEqual("rarn", result)
-
-    def test_PSqMi_ZT_Tw_is_puhngmoongah_zor_torw(self):
-        p = Parser()
-        result = p.parse("PSqMi ZT Tw")
-        self.assertEqual("puhngmoongah zor torw", result)
-
-    def test_K_Cwy_RTn_YVBwy_Kha_Ran_Thw(self):
-        p = Parser()
-        result = p.parse("K Cwy RTn YVBwy Kha Ran Thw")
-        self.assertEqual("kah chiwya rorn yavarwya khahwa rarwan thorw", result)
-
-    def test_Ag_is_jarngi(self):
-        p = Parser()
-        result = p.parse("Ag")
-        self.assertEqual("jarngi", result)
-
 class Parser():
     def parse(self, input):
         newword = re.compile("^$|\\s+")  # Regex Query to determine if a string ends in whitespace or null
@@ -205,6 +111,3 @@ class Parser():
                 if C == "/":
                     insideslash = False
         return output
-
-if __name__ == '__main__': unittest.main()
-
