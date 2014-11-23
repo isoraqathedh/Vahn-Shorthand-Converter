@@ -1,5 +1,4 @@
-import unittest
-import re
+import unittest, sys, re
 
 class Parser():
     def parse(self, input):
@@ -104,10 +103,12 @@ class Parser():
                         output = output[:-endlenmatch] + infixideograms[C] + output[-endlenmatch:]
                     else:
                         output = " INVALID USE OF 'h' "
-                elif C == " " or C == "~":  # If the user enters a space allow it to go through as a space.
+                elif C == " " or C == "~" or C == ".":  # If the user enters a space allow it to go through as a space.
                     output += C
             else:
                 output += C
                 if C == "/":
                     insideslash = False
-        return output
+        return output.replace(".", "")
+
+print(Parser().parse(" ".join(sys.argv[1:])))
