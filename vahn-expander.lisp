@@ -9,7 +9,7 @@
   (loop with out = (make-hash-table :test test)
         for (key . val) in alist
         do (setf (gethash key out) val)
-        finally (return alist)))
+        finally (return out)))
 
 (defparameter *logograms*
   (alist->hash-table '((#\K . "kah") (#\R . "rar") (#\T . "tor") (#\P . "poo") (#\S . "suh")
