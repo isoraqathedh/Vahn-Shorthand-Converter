@@ -1,4 +1,4 @@
-(defpackage info.isoraqathedh.vahn-expander
+(defpackage :info.isoraqathedh.vahn-expander
   (:use :cl :plump-parser :cl-slice)
   (:nicknames :vahn-expander))
 
